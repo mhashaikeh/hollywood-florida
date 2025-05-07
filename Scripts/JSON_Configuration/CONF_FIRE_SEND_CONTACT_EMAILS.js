@@ -1,0 +1,275 @@
+{
+  "Fire/*/*/*": {
+    "WorkflowTaskUpdateAfter": [
+      {
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "metadata": {
+          "description": "Send notification when additional information is required",
+          "operators": {}
+        },
+        "criteria": {
+          "task": [],
+          "status": [
+            "Additional Info Required"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "",
+          "notificationReport": [],
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": ""
+      },
+      {
+        "metadata": {
+          "description": "Send notification when application is denied",
+          "operators": {}
+        },
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "criteria": {
+          "task": [],
+          "status": [
+            "Denied"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "SS_APP_DENIED",
+          "notificationReport": [],
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "reportingInfoStandards": "",
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": ""
+      },
+      {
+        "metadata": {
+          "description": "Send notification when application is withdrawn",
+          "operators": {}
+        },
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "criteria": {
+          "task": [],
+          "status": [
+            "Withdrawn"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "SS_APP_WITHDRAWAL",
+          "notificationReport": [],
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "reportingInfoStandards": "",
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": ""
+      },
+      {
+        "metadata": {
+          "description": "Send payment due notification when Permit is Ready to Issue",
+          "operators": {}
+        },
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS_SEND_PAYMENT_DUE",
+        "criteria": {
+          "task": [],
+          "status": [
+            "Awaiting Payment"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "SS_PAYMENT_DUE",
+          "notificationReport": [
+          ],
+          "reportParamContactType": "Applicant",
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "reportingInfoStandards": "",
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": "POST_BUILDING_LP_VALIDATION"
+      },
+      {
+        "metadata": {
+          "description": "Send payment due notification when Permit is Ready to Issue",
+          "operators": {}
+        },
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "criteria": {
+          "task": [
+            "Plans Coordination"
+          ],
+          "status": [
+            "Ready to Issue"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "SS_PAYMENT_DUE",
+          "notificationReport": [
+          ],
+          "reportParamContactType": "Applicant",
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "reportingInfoStandards": "",
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": "POST_BUILDING_LP_VALIDATION"
+      }
+    ],
+    "InspectionScheduleAfter": [
+      {
+        "metadata": {
+          "description": "Send notification when inspection is scheduled",
+          "operators": {}
+        },
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "criteria": {},
+        "action": {
+          "notificationTemplate": "SS_INSPECTION_SCHEDULED",
+          "notificationReport": [],
+          "notifyContactTypes": [
+            "Applicant",
+            "Authorized Agent"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "reportingInfoStandards": "",
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": ""
+      }
+    ],
+    "InspectionResultSubmitAfter": [
+      {
+        "metadata": {
+          "description": "Send notification when an inspection is resulted",
+          "operators": {}
+        },
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "criteria": {
+          "inspectionTypePerformed": [],
+          "inspectionResult": [
+            "Failed - Fee"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "SS_PAYMENT_DUE",
+          "notificationReport": [],
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "reportingInfoStandards": "",
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": ""
+      }
+
+    ]
+  },
+   "Fire/Amendment/*/*": {
+    "WorkflowTaskUpdateAfter": [
+      {
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "metadata": {
+          "description": "Send notification when additional information is required",
+          "operators": {}
+        },
+        "criteria": {
+          "task": [],
+          "status": [
+            "Additional Info Required"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "SS_ADDITIONAL_INFO_REQD",
+          "notificationReport": [],
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": ""
+      },
+      {
+        "metadata": {
+          "description": "Send notification when application is denied",
+          "operators": {}
+        },
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "criteria": {
+          "task": [],
+          "status": [
+            "Modification Request Denied"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "SS_APP_DENIED",
+          "notificationReport": [],
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "reportingInfoStandards": "",
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": ""
+      },
+      {
+        "metadata": {
+          "description": "Send notification when request is Approved",
+          "operators": {}
+        },
+        "preScript": "PRE_PREPARE_CONTACT_PARAMS",
+        "criteria": {
+          "task": [],
+          "status": [
+            "Modification Request Approved"
+          ]
+        },
+        "action": {
+          "notificationTemplate": "SS_REQUEST_APPROVED",
+          "notificationReport": [],
+          "notifyContactTypes": [
+            "Applicant"
+          ],
+          "additionalEmailsTo": "",
+          "url4ACA": "",
+          "createFromParent": false,
+          "reportingInfoStandards": "",
+          "useDepartmentInformationStandardChoice": true
+        },
+        "postScript": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "Enforcement/Permit/Dog/Renewal": {
+    "ApplicationSubmitAfter": [
+      {
+        "metadata": {
+          "description": "Copy data from Permit to Renewal",
+          "operators": {}
+        },
+        "preScript": "",
+        "criteria": {
+          "recordType": "Enforcement/Permit/Dog/NA"
+        },
+        "action": {
+          "usageType": "copyFromParent",
+          "Renewal": true,
+          "CONTACTS": [
+            "ALL"
+          ],
+          "ASI": [
+            "ALL"
+          ],
+          "ASIT": [
+            "ALL"
+          ],
+          "CONDITIONS": [
+            "ALL"
+          ],
+          "ADDRESS": [
+            "ALL"
+          ],
+          "LICENSEDPROFESSIONALS": [
+            "ALL"
+          ],
+          "keepExistingAPO": true,
+          "RECORDDETAILS": true,
+          "RECORDNAME": true,
+          "PARCEL": true,
+          "OWNER": true,
+          "ADDITIONALINFO": false,
+          "EDUCATION": false,
+          "CONTEDUCATION": false,
+          "EXAM": false,
+          "DOCUMENT": false
+        },
+        "postScript": ""
+      }
+    ]
+  }
+}

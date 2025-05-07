@@ -1,0 +1,33 @@
+{
+  "Enforcement/Permit/Dog/Renewal": {
+    "WorkflowTaskUpdateAfter": [
+      {
+        "metadata": {
+          "description": "Updates parent record",
+          "operators": {}
+        },
+        "criteria": {
+          "task": [
+            "Permit Renewal"
+          ],
+          "status": [
+            "Renewed"
+          ]
+        },
+        "preScript": "",
+        "action": {
+          "issuedRecordStatus": "Active",
+          "issuedExpirationStatus": "Active",
+          "issuedLPStatus": "A",
+          "expirationType": "Function",
+          "expirationPeriod": "",
+          "customExpirationFunction": "dDogRenewalDate",
+          "copyComponents": [
+            "Custom Fields"
+          ]
+        },
+        "postScript": "POST_DDOG_RENEWAL_ISSUANCE"
+      }
+    ]
+  }
+}
