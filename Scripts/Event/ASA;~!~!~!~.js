@@ -10,7 +10,7 @@ try{
 		copyParcelGisObjects(); //Needed to get GIS feature associated when created by AMO or Apps 
 		
 		// Records to get GIS info for custom fields:
-		if (appMatch("Building/Fence/*/*") ||  
+		if (appMatch("Building/Fence/*/*") ||   
 			appMatch("Building/Window and Door/*/*") || 
 			appMatch("Building/Commercial/Plumbing/*") ||  
 			appMatch("Building/Residential/Plumbing/*") || 
