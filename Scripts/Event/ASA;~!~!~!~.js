@@ -12,7 +12,7 @@ try{
 		// Records to get GIS info for custom fields:
 		if (appMatch("Building/Fence/*/*") ||  
 			appMatch("Building/Window and Door/*/*") || 
-			appMatch("Building/Commercial/Plumbing/*") || 
+			appMatch("Building/Commercial/Plumbing/*") ||  
 			appMatch("Building/Residential/Plumbing/*") || 
 			appMatch("Building/Commercial/Demolition/*") || 
 			appMatch("Building/Residential/Demolition/*") || 
